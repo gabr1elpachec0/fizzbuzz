@@ -1,6 +1,9 @@
 package com.example.fizzBuzz;
 
 import com.example.fizzBuzz.fizzBuzz.FizzBuzz;
+import com.example.fizzBuzz.fizzBuzz.MultipleOfFive;
+import com.example.fizzBuzz.fizzBuzz.MultipleOfThree;
+import com.example.fizzBuzz.fizzBuzz.MultipleOfThreeAndFive;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -15,19 +18,22 @@ class FizzBuzzApplicationTests {
 
 	@Test
 	void multipleOfThree() {
-		FizzBuzz fizzBuzz = new FizzBuzz(3);
-		assertEquals("Fizz", fizzBuzz.verifyNumber());
+		MultipleOfThree multipleOfThree = new MultipleOfThree();
+		FizzBuzz fizzBuzz = new FizzBuzz(3, multipleOfThree);
+		assertEquals("Fizz", multipleOfThree.verifyNumber(fizzBuzz));
 	}
 
 	@Test
 	void multipleOfFive() {
-		FizzBuzz fizzBuzz = new FizzBuzz(5);
-		assertEquals("Buzz", fizzBuzz.verifyNumber());
+		MultipleOfFive multipleOfFive = new MultipleOfFive();
+		FizzBuzz fizzBuzz = new FizzBuzz(5, multipleOfFive);
+		assertEquals("Buzz", multipleOfFive.verifyNumber(fizzBuzz));
 	}
 
 	@Test
 	void multipleOfThreeAndFive() {
-		FizzBuzz fizzBuzz = new FizzBuzz(53);
-		assertEquals("FizzBuzz", fizzBuzz.verifyNumber());
+		MultipleOfThreeAndFive multipleOfThreeAndFive = new MultipleOfThreeAndFive();
+		FizzBuzz fizzBuzz = new FizzBuzz(30, multipleOfThreeAndFive);
+		assertEquals("FizzBuzz", multipleOfThreeAndFive.verifyNumber(fizzBuzz));
 	}
 }

@@ -1,25 +1,29 @@
 package com.example.fizzBuzz.fizzBuzz;
 
+import com.example.fizzBuzz.VerificationStrategy;
+
 public class FizzBuzz {
     private int number;
+    private VerificationStrategy verificationStrategy;
 
-    public FizzBuzz(int number) {
+    public FizzBuzz(int number, VerificationStrategy verificationStrategy) {
+        this.number = number;
+        this.verificationStrategy = verificationStrategy;
+    }
+
+    public int getNumber() {
+        return number;
+    }
+
+    public void setNumber(int number) {
         this.number = number;
     }
 
-    public String verifyNumber() {
-        if ((number % 3 == 0 && number % 5 == 0)) {
-            return "FizzBuzz";
-        } else if (number % 3 == 0) {
-            return "Fizz";
-        } else if (number % 5 == 0) {
-            return "Buzz";
-        }
-        return null;
+    public VerificationStrategy getVerificationStrategy() {
+        return verificationStrategy;
     }
 
-    public String toString(int number) {
-        String value = Integer.toString(number);
-        return value;
+    public void setVerificationStrategy(VerificationStrategy verificationStrategy) {
+        this.verificationStrategy = verificationStrategy;
     }
 }
