@@ -2,12 +2,7 @@ package com.example.fizzBuzz;
 
 import com.example.fizzBuzz.fizzBuzz.FizzBuzz;
 
-public abstract class VerificationStrategy {
-    public String verifyIfMultipleOrContains(FizzBuzz fizzBuzz) {
-        return null;
-    }
-
-    public int verifyIfNonMultipleOrContains(FizzBuzz fizzBuzz) {
-        return 0;
-    }
+public interface VerificationStrategy {
+    boolean isStrategy(int number);
+    String processStrategy(int number);
 }
