@@ -4,11 +4,11 @@ import com.example.fizzBuzz.VerificationStrategy;
 
 public class FizzBuzz {
     private int number;
-    private VerificationStrategy verificationStrategy;
+    private VerificationStrategy strategy;
 
-    public FizzBuzz(int number, VerificationStrategy verificationStrategy) {
+    public FizzBuzz(int number, VerificationStrategy strategy) {
         this.number = number;
-        this.verificationStrategy = verificationStrategy;
+        this.strategy = strategy;
     }
 
     public int getNumber() {
@@ -17,13 +17,5 @@ public class FizzBuzz {
 
     public void setNumber(int number) {
         this.number = number;
-    }
-
-    public VerificationStrategy getVerificationStrategy() {
-        return verificationStrategy;
-    }
-
-    public void setVerificationStrategy(VerificationStrategy verificationStrategy) {
-        this.verificationStrategy = verificationStrategy;
     }
 }

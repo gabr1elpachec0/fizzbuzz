@@ -2,9 +2,9 @@ package com.example.fizzBuzz.fizzBuzz;
 
 import com.example.fizzBuzz.VerificationStrategy;
 
-public class MultipleOfThreeAndFive implements VerificationStrategy {
+public class MultiplesOfThreeAndFive extends VerificationStrategy {
     @Override
-    public String verifyNumber(FizzBuzz fizzBuzz) {
+    public String verifyIfMultipleOrContains(FizzBuzz fizzBuzz) {
         try {
             if (fizzBuzz.getNumber() % 3 == 0 && fizzBuzz.getNumber() % 5 == 0) {
                 return "FizzBuzz";

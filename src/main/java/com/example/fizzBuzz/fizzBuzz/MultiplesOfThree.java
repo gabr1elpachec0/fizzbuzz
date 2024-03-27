@@ -1,10 +1,11 @@
+
 package com.example.fizzBuzz.fizzBuzz;
 
 import com.example.fizzBuzz.VerificationStrategy;
 
-public class MultipleOfThree implements VerificationStrategy {
+public class MultiplesOfThree extends VerificationStrategy {
     @Override
-    public String verifyNumber(FizzBuzz fizzBuzz) {
+    public String verifyIfMultipleOrContains(FizzBuzz fizzBuzz) {
         try {
             if (fizzBuzz.getNumber() % 3 == 0) {
                 return "Fizz";
